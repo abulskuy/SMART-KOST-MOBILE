@@ -1,0 +1,94 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:backgroundTint="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvRoomNumber"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded_background_white"
+            android:padding="8dp"
+            android:text="KAMAR\n01"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIAN"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvRoomNumber"
+            android:layout_marginStart="16dp" />
+
+        <View
+            android:id="@+id/lineSeparator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran\nRp.1.500.000"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lineSeparator"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvRentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sewa\nKosong"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvPayment"
+            app:layout_constraintStart_toStartOf="@id/tvPayment"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvElectricity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listrik\n---"
+            android:textSize="14sp"
+            android:gravity="end"
+            app:layout_constraintTop_toTopOf="@id/tvPayment"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/tvWater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Air\n---"
+            android:textSize="14sp"
+            android:gravity="end"
+            app:layout_constraintTop_toBottomOf="@id/tvElectricity"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
